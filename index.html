@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="formulaire">
+    <label for="nom">Nom?</label>
+    <input type="text" id="taskinput" placeholder="ajouter ">
+    <button onclick="addTask()">Ok</button>
+    <table class="table table-bordered border-dark" id="myTable">
+        <thead>
+         <tr>
+            <th scope="col">Prenom</th>
+            <th scope="col">Action</th>
+         </tr>
+        </thead>
+        <tbody scope="col"id="taskList">
+      
+         
+        </tbody>
+
+    </table>
+
+</div>
+<!-- <ul id="taskList"></ul> -->
+    <script src="app.js"></script>
+</body>
+</html>

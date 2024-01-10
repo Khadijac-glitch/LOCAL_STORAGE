@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Example</title>
+</head>
+<body>
+    <label for="username">Enter your username:</label>
+    <input type="text" id="username" />
+    <button onclick="saveUsername()">Save</button>
+
+    <script>
+        // Charger la valeur précédemment enregistrée au chargement de la page
+        window.onload = function() {
+            var savedUsername = localStorage.getItem('username');
+            if (savedUsername) {
+                document.getElementById('username').value = savedUsername;
+            }
+        };
+
+        // Fonction pour enregistrer la valeur du champ dans le localStorage
+        function saveUsername() {
+            var usernameInput = document.getElementById('username');
+            var usernameValue = usernameInput.value;
+
+            // Vérifier si le champ n'est pas vide avant d'enregistrer
+            if (usernameValue.trim() !== '') {
+                localStorage.setItem('username', usernameValue);
+                alert('Username saved!');
+            } else {
+                alert('Please enter a username.');
+            }
+        }
+    </script>
+</body>
+</html>
